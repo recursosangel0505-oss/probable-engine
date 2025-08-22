@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Excel Fácil | Cursos Interactivos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Usamos la fuente Poppins para un look más amigable y moderno */
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Colores personalizados para un tema cálido y dinámico */
+        .bg-cream { background-color: #FFFBEB; }
+        .bg-teal-custom { background-color: #14B8A6; }
+        .text-teal-custom { color: #14B8A6; }
+        .border-teal-custom { border-color: #14B8A6; }
+        .ring-.teal-custom:focus {
+  outline: 2px solid #14B8A6;
+}
+        .hover\:bg-teal-custom-dark:hover { background-color: #1e760f; }
+        .text-amber-500 { color: #F59E0B; }
+        .animate-scale-in {
+            animation: scaleIn 0.3s ease-out;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <div class="container mx-auto px-4">
+
+        <!-- ===== NAVEGACIÓN ===== -->
+        <header class="sticky top-0 bg-cream bg-opacity-95 backdrop-blur-sm z-40 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-teal-custom">ExcelFácil</a>
+                <nav class="hidden md:flex space-x-1 lg:space-x-2">
+                    <a href="#inicio" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Inicio</a>
+                    <a href="#cursos" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Cursos</a>
+                    <a href="#recursos" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Recursos</a>
+                    <a href="#galeria" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Galería</a>
+                    <a href="#acerca" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Acerca de</a>
+                    <a href="#testimonios" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200">Testimonios</a>
+                    <a href="#contacto" class="bg-teal-custom text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-teal-custom-dark transition-colors">Contacto</a>
+                </nav>
+                <!-- Botón de menú para móviles -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Menú desplegable para móviles -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Inicio</a>
+                <a href="#cursos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Cursos</a>
+                <a href="#recursos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Recursos</a>
+                <a href="#galeria" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Galería</a>
+                <a href="#acerca" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Acerca de</a>
+                <a href="#testimonios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Testimonios</a>
+                <a href="#contacto" class="block mt-2 bg-teal-custom text-white text-center px-4 py-2 rounded-full text-base font-medium hover:bg-teal-custom-dark transition-colors">Contacto</a>
+            </div>
+        </header>
+        <main>
+            <!-- ===== SECCIÓN DE INICIO (HERO) ===== -->
+            <section id="inicio" class="text-center pt-20 pb-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Aprende Excel de <span class="text-teal-custom">Desde Cero</span></h1>
+                <br>
+                <p class="text-teal-custom">IRCA ZACATECOLUCA DOMINGO SEGUNDO NIVEL</p>
+                <br>
+                <br>
+                <br>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cursos interactivos creado por estudiantes para estudiantes con infografías, resúmenes y videos cortos para que domines Excel de forma fácil y divertida.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="#cursos" class="mt-8 inline-block bg-teal-custom text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-teal-custom-dark transition-transform transform hover:scale-105">¡Empezar a Aprender!</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </section>
+                <br>
+
+            <!-- ===== SECCIÓN DE CURSOS (CONTENEDOR PRINCIPAL) ===== -->
+            <section id="cursos" class="py-10">
+                <br>
+                <br>
+                <!-- NIVEL BÁSICO (ACTUALIZADO) -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-center mb-4">Nivel 1: Introducción a Excel</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Conceptos básicos para que te familiarices con la herramienta más poderosa de hojas de cálculo.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <!-- Lección 1 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/14B8A6/FFFBEB?text=¿Qué+es+Excel?" alt="¿Qué es Excel?" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">1. ¿Qué es Excel?</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Descubre qué es una hoja de cálculo y cómo puede ayudarte a organizar datos y realizar cálculos.</p>
+                                <button onclick="openVideoModal('VPYtnIuUlvU')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 2 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=Crear" alt="Crea un libro" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">2. Crear un Libro</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprende a crear tu primer libro de trabajo y posterior aprendaras a guardarlo en tu computadora para no perder tu progreso.</p>
+                                <button onclick="openVideoModal('Mwl9fGUzUCc')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 3 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=Guardar" alt="Guardar un libro de excel" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">3. Guardar un Libro de Excel</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprende a guardarlo en tu computadora para no perder tu progreso.</p>
+                                <button onclick="openVideoModal('mTjb1VNIuTE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 4 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Interfaz" alt="Interfaz de Excel" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">4. Filas, Columnas y Celdas</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Identifica las partes fundamentales de la pantalla de Excel. ¡La base de todo!</p>
+                                <button onclick="openVideoModal('PQfZba9mID4')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 5 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/BE123C/FFFFFF?text=Enfoque+de+Celdas" alt="Enfoque de Celdas" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">5. Enfoque de Celdas</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Domina cómo moverte, seleccionar celdas y rangos. La clave para trabajar de forma rápida y eficiente.</p>
+                                <button onclick="openVideoModal('bf45sXabogc')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 6 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/059669/FFFFFF?text=Función+SUMA" alt="Función Suma" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">6. Función Sumar</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Realiza tu primera operación. Te enseñamos a sumar valores de forma rápida usando fórmulas.</p>
+                                <button onclick="openVideoModal('9FPm1sDq5Ic')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 7 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/DB2777/FFFFFF?text=Función+RESTA" alt="Función Restar" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">7. Función Restar</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprende a calcular la diferencia entre dos o más valores utilizando fórmulas simples en Excel.</p>
+                                <button onclick="openVideoModal('J6m5f9gjdXI')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 8 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Función+MULTIPLICAR" alt="Función Multiplicar" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">8. Función Multiplicar</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Calcula productos y totales de forma automática. Esencial para inventarios, ventas y más.</p>
+                                <button onclick="openVideoModal('hNWNqes2TiI')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 9 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/CA8A04/FFFFFF?text=Función+DIVIDIR" alt="Función Dividir" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">9. Función Dividir</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprende a repartir cantidades y calcular porcentajes con la operación de división en Excel.</p>
+                                <button onclick="openVideoModal('VIDEO_ID_HERE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 10 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/65A30D/FFFFFF?text=Función+PROMEDIO" alt="Función Promedio" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">10. Función Promedio</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Calcula la media de un conjunto de datos, ideal para notas, gastos, ventas y análisis estadísticos.</p>
+                                <button onclick="openVideoModal('VIDEO_ID_HERE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 11 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/EA580C/FFFFFF?text=Combinar+y+Centrar" alt="Combinar y Centrar" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">11. Combinar y Centrar</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Crea títulos atractivos y organiza tus tablas uniendo varias celdas en una sola.</p>
+                                <button onclick="openVideoModal('VIDEO_ID_HERE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 12 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/9333EA/FFFFFF?text=Insertar+Imágenes" alt="Insertar Imágenes" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">12. Insertar Imágenes</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Añade logos, fotos y otros elementos visuales a tus hojas de cálculo para hacerlas más profesionales.</p>
+                                <button onclick="openVideoModal('VIDEO_ID_HERE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 13 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/0284C7/FFFFFF?text=Gráficos" alt="Gráficos en Excel" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">13. Crear Gráficos Básicos</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Transforma tus números en impactantes gráficos de barras o circulares para visualizar tus datos.</p>
+                                <button onclick="openVideoModal('ES9zEtT92vI')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                        <!-- Lección 14 -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/DC2626/FFFFFF?text=Función+SI" alt="Función SI" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">14. Función SI (Lógica)</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Introduce la lógica en tus hojas. Haz que Excel te dé una respuesta basada en una condición.</p>
+                                <button onclick="openVideoModal('VIDEO_ID_HERE')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NIVEL INTERMEDIO -->
+                <div id="cursos-intermedio" class="mb-16">
+                    <h2 class="text-3xl font-bold text-center mb-4">Nivel 2: Excel Intermedio</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Lleva tus habilidades al siguiente nivel con funciones y herramientas que te ahorrarán horas de trabajo.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/EF4444/FFFFFF?text=BUSCARV" alt="[Imagen de la función BUSCARV]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">4. Función BUSCARV (VLOOKUP)</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprende a buscar datos en grandes tablas de forma automática. Una de las funciones más demandadas.</p>
+                                <button onclick="openVideoModal('DkXh2mMJ1pI')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Tablas+Dinámicas" alt="[Imagen de una tabla dinámica]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">5. Tablas Dinámicas</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Resume y analiza miles de datos con solo arrastrar y soltar. La herramienta de análisis por excelencia.</p>
+                                <button onclick="openVideoModal('p-hVIm5b_x8')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Formato+Condicional" alt="[Imagen de formato condicional]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">6. Formato Condicional</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Haz que tus datos hablen por sí solos. Resalta celdas importantes, encuentra duplicados y visualiza tendencias.</p>
+                                <button onclick="openVideoModal('NEUa-8jA_0g')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NIVEL AVANZADO -->
+                <div id="cursos-avanzado">
+                    <h2 class="text-3xl font-bold text-center mb-4">Nivel 3: Excel Avanzado</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Automatiza tareas y maneja datos complejos como un verdadero profesional. ¡Conviértete en un héroe de Excel!</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/2563EB/FFFFFF?text=Macros" alt="[Imagen de código VBA]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">7. Introducción a Macros y VBA</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Graba y ejecuta tareas repetitivas con un solo clic. Ahorra tiempo y elimina errores humanos.</p>
+                                <button onclick="openVideoModal('F1_v_3-3e_s')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/059669/FFFFFF?text=Power+Query" alt="[Imagen de Power Query]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">8. Power Query</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Conecta, limpia y transforma datos de múltiples fuentes sin necesidad de escribir fórmulas complejas.</p>
+                                <button onclick="openVideoModal('fCde_s2D_I4')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/D97706/FFFFFF?text=Funciones+Anidadas" alt="[Imagen de una fórmula compleja]" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">9. Lógica con SI, Y, O</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Crea fórmulas inteligentes que tomen decisiones basadas en múltiples condiciones lógicas.</p>
+                                <button onclick="openVideoModal('8-k9p_D_cKo')" class="w-full bg-teal-custom text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-custom-dark transition-colors">Ver Lección en Video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <!-- ===== SECCIÓN: RECURSOS DESCARGABLES ===== -->
+            <section id="recursos" class="py-20 bg-white rounded-xl shadow-md">
+                <div class="text-center">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="text-3xl font-bold">Recursos Adicionales</h2>
+                    <p class="text-gray-600 mt-2 mb-12 max-w-xl mx-auto">Potencia tu aprendizaje con estas plantillas y guías listas para usar. ¡Totalmente gratis!</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+                    <div class="bg-cream p-6 rounded-xl shadow-lg flex items-center space-x-4 transform hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-file-excel text-teal-custom text-4xl"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">Plantilla de Presupuesto</h4>
+                            <p class="text-sm text-gray-500">Organiza tus finanzas personales.</p>
+                        </div>
+                        <a href="#" class="ml-auto bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-full" title="Descargar">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg flex items-center space-x-4 transform hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-file-pdf text-red-500 text-4xl"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">Atajos de Teclado</h4>
+                            <p class="text-sm text-gray-500">Guía en PDF para ser más rápido.</p>
+                        </div>
+                        <a href="#" class="ml-auto bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-full" title="Descargar">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg flex items-center space-x-4 transform hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-file-invoice-dollar text-blue-500 text-4xl"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">Plantilla de Factura</h4>
+                            <p class="text-sm text-gray-500">Modelo simple para tus clientes.</p>
+                        </div>
+                        <a href="#" class="ml-auto bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-full" title="Descargar">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </section>
+            
+            <!-- ===== NUEVA SECCIÓN: GALERÍA ===== -->
+            <section id="galeria" class="py-20">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">Galería de Momentos</h2>
+                    <p class="text-gray-600 mt-2 mb-12 max-w-xl mx-auto">Un vistazo a nuestros talleres, eventos y los proyectos de nuestros estudiantes.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Imagen de Galería 1 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer" onclick="openGalleryModal('https://placehold.co/800x600/10B981/FFFFFF?text=Taller+Infantil', 'Enseñando a los más pequeños a dar sus primeros pasos en Excel de forma divertida.')">
+                        <img src="https://placehold.co/800x600/10B981/FFFFFF?text=Taller+Infantil" alt="[Taller de Excel para niños]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-sm">Taller Infantil de Excel</p>
+                        </div>
+                    </div>
+                    <!-- Imagen de Galería 2 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer" onclick="openGalleryModal('https://placehold.co/800x600/3B82F6/FFFFFF?text=Clase+Avanzada', 'Estudiantes del nivel avanzado aplicando funciones lógicas en un caso práctico.')">
+                        <img src="https://placehold.co/800x600/3B82F6/FFFFFF?text=Clase+Avanzada" alt="[Clase de Excel avanzado]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-sm">Proyecto de Clase Avanzada</p>
+                        </div>
+                    </div>
+                    <!-- Imagen de Galería 3 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer" onclick="openGalleryModal('https://placehold.co/800x600/F59E0B/FFFFFF?text=Evento+Empresas', 'Capacitación sobre Tablas Dinámicas para el equipo de una empresa local.')">
+                        <img src="https://placehold.co/800x600/F59E0B/FFFFFF?text=Evento+Empresas" alt="[Evento de capacitación para empresas]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-sm">Capacitación a Empresas</p>
+                        </div>
+                    </div>
+                     <!-- Imagen de Galería 4 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer" onclick="openGalleryModal('https://placehold.co/800x600/8B5CF6/FFFFFF?text=Proyecto+Final', 'Presentación de un dashboard creado como proyecto final por un estudiante.')">
+                        <img src="https://placehold.co/800x600/8B5CF6/FFFFFF?text=Proyecto+Final" alt="[Presentación de proyecto final]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-sm">Dashboard de Proyecto Final</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== SECCIÓN ACERCA DE ===== -->
+            <section id="acerca" class="py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-white rounded-xl shadow-md p-8">
+                    <div class="px-4">
+                        <h2 class="text-3xl font-bold mb-4">¡Hola! Somos tu guía en el mundo de Excel</h2>
+                        <p class="text-gray-600 mb-4">Nuestra misión es desmostrales que Excel no es tan complicado como te lo describen, que cualquiera puede aprender a usarlo. como grupo de Domingo nivel 2 del programa ingles e informatica para niños, hemos desarrollado un método simple, visual y directo al grano para que aprendas sin frustraciones.</p>
+                        <p class="text-gray-600">¡Prepárate para convertirte en un experto en hojas de cálculo!</p>
+                    </div>
+                    <div class="px-4">
+                           <img src="img/domingo.jpeg" class="rounded-lg shadow-lg mx-auto">
+                    </div>
+                </div>
+            </section>
+                   <br>
+                   <br>
+
+            <!-- ===== SECCIÓN: TESTIMONIOS ===== -->
+            <section id="testimonios" class="py-20">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">Lo que dicen nuestros estudiantes</h2>
+                    <p class="text-gray-600 mt-2 mb-12 max-w-xl mx-auto">Nos encanta ver el progreso de nuestra comunidad. ¡Tú podrías ser el siguiente caso de éxito!</p>
+                    <p class="text-gray-600 mt-2 mb-12 max-w-xl mx-auto">LO SENTIMOS ESTAMOS EN PROCESO DE HACER MEJORIAS CON NUESTRA PAGINA, PERO PRONTO TENDREMOS ESTE APARTADO DISPONIBLE PARA TI!</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonios... -->
+                </div>
+            </section>
+
+            <!-- ===== SECCIÓN DE CONTACTO ===== -->
+            <section id="contacto" class="py-20">
+                <!-- Contenido de contacto... -->
+            </section>
+        </main>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="text-center py-8 border-t border-gray-200 mt-12">
+            <!-- Contenido del footer... -->
+        </footer>
+
+    </div>
+
+    <!-- ===== MODAL PARA EL VIDEO ===== -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg w-full max-w-3xl relative animate-scale-in">
+            <button onclick="closeVideoModal()" class="absolute -top-3 -right-3 bg-white text-gray-700 rounded-full h-10 w-10 flex items-center justify-center text-2xl leading-none shadow-lg">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="video-iframe" class="w-full h-full rounded-lg" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NUEVO MODAL PARA LA GALERÍA ===== -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg w-full max-w-4xl relative animate-scale-in p-4 text-center">
+            <button onclick="closeGalleryModal()" class="absolute -top-4 -right-4 bg-white text-gray-700 rounded-full h-10 w-10 flex items-center justify-center text-2xl leading-none shadow-lg">&times;</button>
+            <img id="gallery-modal-image" src="" alt="[Imagen de la galería ampliada]" class="max-h-[70vh] w-auto mx-auto rounded-lg mb-4">
+            <p id="gallery-modal-description" class="text-gray-700"></p>
+        </div>
+    </div>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // --- Lógica para el menú móvil ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Lógica para el modal de video ---
+        const videoModal = document.getElementById('video-modal');
+        const videoIframe = document.getElementById('video-iframe');
+        function openVideoModal(youtubeId) {
+            videoIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+            videoModal.classList.remove('hidden');
+        }
+        function closeVideoModal() {
+            videoIframe.src = '';
+            videoModal.classList.add('hidden');
+        }
+        videoModal.addEventListener('click', (event) => {
+            if (event.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+
+        // --- NUEVA LÓGICA PARA EL MODAL DE GALERÍA ---
+        const galleryModal = document.getElementById('gallery-modal');
+        const galleryModalImage = document.getElementById('gallery-modal-image');
+        const galleryModalDescription = document.getElementById('gallery-modal-description');
+
+        function openGalleryModal(imageSrc, description) {
+            galleryModalImage.src = imageSrc;
+            galleryModalDescription.textContent = description;
+            galleryModal.classList.remove('hidden');
+        }
+
+        function closeGalleryModal() {
+            galleryModal.classList.add('hidden');
+            // Opcional: limpiar el src para detener la carga si fuera necesario
+            galleryModalImage.src = ''; 
+        }
+
+        galleryModal.addEventListener('click', (event) => {
+            // Cierra el modal solo si se hace clic en el fondo oscuro, no en la imagen o el texto.
+            if (event.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+    </script>
+</body>
+</html>
